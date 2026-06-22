@@ -1,0 +1,14 @@
+# A second demo extension in this monorepo — ferroDAC discovers it alongside
+# window-integral by scanning the repo's subdirectories for manifests.
+[extension]
+name        = "smoother"
+version     = "0.1.0"
+api         = 1
+description = "Moving-average smoother: clean up a noisy spectrum (trace → trace)."
+authors     = ["ferroDAC"]
+license     = "MIT"
+homepage    = "https://github.com/TobiasHofmaenner/ferrodac-extensions"
+
+[[processors]]
+entry      = "smoother.processors.smooth:MovingAverage"
+whitepaper = "papers/smoothing.md"

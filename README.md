@@ -29,6 +29,7 @@ one repo can be one extension or many.
 | Extension | Kind | What it does |
 |-----------|------|--------------|
 | [`window-integral`](window-integral/) | processor | Integrate a spectrum over an m/z window → a scalar (a partial-pressure proxy). |
+| [`smoother`](smoother/) | processor | Moving-average (boxcar) smoothing of a spectrum (trace → trace). |
 
 ## Writing your own
 
