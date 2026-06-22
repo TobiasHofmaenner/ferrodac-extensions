@@ -1,0 +1,18 @@
+# ferroDAC extension manifest. ferroDAC loads this extension by git-clone (pinned
+# commit) → import, and each `entry` below is imported and registered. Each entry may
+# carry a `whitepaper` (PDF/MD) — the algorithm's explanation + references, shown in-app.
+[extension]
+name        = "window-integral"
+version     = "0.1.0"
+api         = 1                          # ferroDAC plugin-API version this targets
+description = "Integrate a spectrum over an m/z window → a scalar (partial-pressure proxy)."
+authors     = ["ferroDAC"]
+license     = "MIT"
+homepage    = "https://github.com/TobiasHofmaenner/ferrodac-extensions"
+
+[[processors]]
+entry      = "window_integral.processors.integrate:WindowIntegral"
+whitepaper = "papers/integrate.md"
+
+# [[drivers]]   — a Device subclass:  entry = "pkg.module:MyDriver"
+# [[widgets]]   — a Widget subclass:  entry = "pkg.module:MyWidget", whitepaper = "..."
